@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center; /* Center-align text and image */
-    gap: 10rem; /* Space between text and image */
+    gap: 5rem; /* Reduce space between text and image */
     flex-wrap: wrap; /* Ensure responsiveness */
     text-align: left; /* Align text to the left */
 }
@@ -44,8 +44,17 @@
     margin: 0rem auto 0; /* Maintain reduced margin between the heading and the line */
 }
 
+.text-container .explanation {
+    font-size: 1.2rem; /* Adjust text size */
+    line-height: 1.5; /* Adjust line height for readability */
+    color: #333; /* Ensure consistent text color */
+    margin: 0 auto 2rem; /* Center the paragraphs and add spacing below */
+    text-align: left; /* Keep text left-aligned */
+    max-width: 650px; /* Limit the width for better readability */
+}
+
 .smallpages img {
-    width: 650px; /* Slightly increase image size */
+    width: 500px; /* Slightly increase image size */
     height: auto;
     border-radius: 10px; /* Optional: Add rounded corners */
 }
