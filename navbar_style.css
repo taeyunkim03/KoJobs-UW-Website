@@ -27,6 +27,10 @@
     transition: color 0.3s;
 }
 
+.navbar ul li a[href="membership.html"] {
+    color: #EFBF04 ; /* Set font color to yellow */
+}
+
 .navbar ul li a:hover {
     color: #ddd;
 }
