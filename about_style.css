@@ -115,7 +115,7 @@
     background: url('about_img/about_membership.png') no-repeat center center/cover;
     color: white;
     text-align: center;
-    padding: 15rem 1rem; /* Increase padding to make the background taller */
+    padding: 10rem 1rem; /* Increase padding to make the background taller */
     position: relative;
 }
 

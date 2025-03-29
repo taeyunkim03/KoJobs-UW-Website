@@ -34,7 +34,7 @@ p {
     background: url('images/homepage_main.jpg') no-repeat center center/cover;
     color: white;
     text-align: center;
-    padding: 15rem 1rem; /* Increased padding to make the banner taller */
+    padding: 10rem 1rem; /* Increased padding to make the banner taller */
 }
 
 .main_banner h1 {
