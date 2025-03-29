@@ -34,7 +34,7 @@ p {
     background: url('images/homepage_main.jpg') no-repeat center center/cover;
     color: white;
     text-align: center;
-    padding: 10rem 1rem; /* Increased padding to make the banner taller */
+    padding: 10rem 1rem;
 }
 
 .main_banner h1 {
@@ -133,7 +133,7 @@ section {
 }
 
 .sponsors .btn {
-    margin-top: 1rem; /* Increase the top margin of the button */
+    margin-top: 1rem;
 }
 
 .about_us div, .events div, .officers div, .join div {
@@ -149,9 +149,9 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2rem; /* Space between image and text */
-    flex-wrap: wrap; /* Ensure the image moves below the text on smaller screens */
-    text-align: left; /* Align text to the left */
+    gap: 2rem;
+    flex-wrap: wrap; 
+    text-align: left; 
 }
 
 .about_us img, .events img, .officers img, .join img {
@@ -161,15 +161,15 @@ section {
 }
 
 .events img {
-    order: -1; /* Ensure the image appears to the left of the text */
+    order: -1; 
     max-width: 500px;
     height: auto;
-    border-radius: 10px; /* Optional: Add rounded corners */
+    border-radius: 10px; 
 }
 
 @media (max-width: 768px) {
     .events img {
-        order: 2; /* Move the image below the text on smaller screens */
+        order: 2;
     }
 }
 
@@ -194,9 +194,9 @@ section {
 }
 
 .btn:hover {
-    background-color: #8A2BE2; /* Change background color on hover */
-    transform: scale(1.1); /* Slightly enlarge the button */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for a standout effect */
+    background-color: #8A2BE2; 
+    transform: scale(1.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 /* Navbar */
@@ -216,21 +216,21 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2rem; /* Space between image and text */
-    flex-wrap: wrap; /* Ensure the image moves below the text on smaller screens */
-    text-align: left; /* Align text to the left */
+    gap: 2rem; 
+    flex-wrap: wrap; 
+    text-align: left;
 }
 
 .join img {
-    order: -1; /* Ensure the image appears to the left of the text */
+    order: -1; 
     max-width: 400px;
     height: auto;
-    border-radius: 10px; /* Optional: Add rounded corners */
+    border-radius: 10px; 
 }
 
 @media (max-width: 768px) {
     .join img {
-        order: 2; /* Move the image below the text on smaller screens */
+        order: 2; 
     }
 }
 
@@ -238,16 +238,16 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2rem; /* Space between text and image */
-    flex-wrap: wrap; /* Ensure responsiveness */
-    text-align: left; /* Align text to the left */
+    gap: 2rem;
+    flex-wrap: wrap;
+    text-align: left; 
 }
 
 .sponsors img {
-    order: 1; /* Ensure the image appears on the right */
+    order: 1; 
     max-width: 650px;
     height: auto;
-    border-radius: 10px; /* Optional: Add rounded corners */
+    border-radius: 10px; 
 }
 
 .sponsors .text-container {

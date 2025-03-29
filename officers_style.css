@@ -191,8 +191,8 @@ hr {
 }
 
 .explanation {
-    font-size: 1.2rem; /* Increase font size */
-    line-height: 1.5; /* Maintain line height for readability */
-    color: #333; /* Ensure consistent text color */
+    font-size: 1.2rem;
+    line-height: 1.5; 
+    color: #333;
 }
 

@@ -10,16 +10,16 @@ body {
     background: url('about_img/about_membership.png') no-repeat center center/cover;
     color: white;
     text-align: center;
-    padding: 10rem 1rem; /* Adjust padding for better spacing */
+    padding: 10rem 1rem;
 }
 
 .membership-content {
-    max-width: 800px; /* Adjust width for better readability */
+    max-width: 800px;
     margin: 0 auto;
 }
 
 .membership h1 {
-    font-size: 10rem; /* Adjust font size for consistency */
+    font-size: 10rem; 
     margin-bottom: 1rem;
     position: relative;
 }
@@ -34,7 +34,7 @@ body {
 }
 
 .membership p {
-    font-size: 1.2rem; /* Adjust font size for readability */
+    font-size: 1.2rem; 
     line-height: 1.8;
     margin-bottom: 2rem;
 }
@@ -58,8 +58,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2rem; /* Space between button, "OR" text, and QR code */
-    margin-top: 2rem; /* Add spacing above the actions */
+    gap: 2rem; 
+    margin-top: 2rem;
 }
 
 .membership-actions .btn {
@@ -69,7 +69,7 @@ body {
     border-radius: 5px;
     font-weight: bold;
     text-decoration: none;
-    font-size: 1.5rem; /* Increase font size */
+    font-size: 1.5rem; 
     transition: background-color 0.3s ease;
 }
 
@@ -84,24 +84,24 @@ body {
 }
 
 .membership-actions .qrcode {
-    width: 150px; /* Set QR code size */
-    height: auto; /* Maintain aspect ratio */
+    width: 150px;
+    height: auto; 
 }
 
 .smallpages {
     background: url('images/uw_quad.jpg') no-repeat center center/cover;
     color: white;
     text-align: center;
-    padding: 7rem 0rem; /* Adjust padding for better spacing */
+    padding: 7rem 0rem; 
 }
 
 .smallpages > div {
-    background-color: rgba(0, 0, 0, 0.5); /* Transparent grey background */
-    padding: 2rem; /* Add padding inside the box */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
-    margin-left: 10rem; /* Adjust margin for better alignment */
-    margin-right: 10rem; /* Adjust margin for better alignment */
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 2rem; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    margin-left: 10rem; 
+    margin-right: 10rem; 
 }
 
 .smallpages h1 {
@@ -110,9 +110,9 @@ body {
 }
 
 .smallpages .explanation {
-    font-size: 2.5rem; /* Adjust font size for consistency */
+    font-size: 2.5rem; 
     line-height: 1.8;
-    max-width: 700px; /* Adjust width for better readability */
+    max-width: 700px;
     margin: 0 auto;
     text-align: center;
 }
@@ -131,26 +131,26 @@ body {
 .membership-actions .btn, 
 .membership-actions .or-text, 
 .membership-actions .qrcode {
-    opacity: 0; /* Start with invisible elements */
-    animation: fadeIn 2s ease forwards; /* Apply fade-in animation */
+    opacity: 0; 
+    animation: fadeIn 2s ease forwards; 
 }
 
 .smallpages h1 {
-    animation-delay: 0.2s; /* Delay for heading */
+    animation-delay: 0.2s; 
 }
 
 .smallpages .explanation {
-    animation-delay: 0.4s; /* Delay for explanation text */
+    animation-delay: 0.6s; 
 }
 
 .membership-actions .btn {
-    animation-delay: 0.6s; /* Delay for button */
+    animation-delay: 0.8s; 
 }
 
 .membership-actions .or-text {
-    animation-delay: 0.8s; /* Delay for "OR" text */
+    animation-delay: 0.8s; 
 }
 
 .membership-actions .qrcode {
-    animation-delay: 1s; /* Delay for QR code */
+    animation-delay: 0.8s; 
 }

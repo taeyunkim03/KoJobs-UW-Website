@@ -1,98 +1,98 @@
 .smallpages > div {
     display: flex;
     align-items: center;
-    justify-content: center; /* Center-align text and image */
-    gap: 5rem; /* Reduce space between text and image */
-    flex-wrap: wrap; /* Ensure responsiveness */
-    text-align: left; /* Align text to the left */
+    justify-content: center;
+    gap: 5rem;
+    flex-wrap: wrap;
+    text-align: left;
 }
 
 .smallpages {
-    padding-top: 5rem; /* Add top padding to increase the gap */
-    padding-bottom: 5rem; /* Add bottom padding to increase the gap */
-    background-color: #F5F5DC; /* Set background color */
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: #F5F5DC;
 }
 
 .text-container {
-    max-width: 650px; /* Slightly increase text width */
-    font-size: 4.2rem; /* Slightly increase text size */
-    line-height: 3.2; /* Adjust line height for readability */
+    max-width: 650px;
+    font-size: 4.2rem;
+    line-height: 3.2;
 }
 
 .text-container::after {
-    content: ''; /* Remove vertical line */
+    content: ''; 
     position: absolute;
     top: 0;
     right: -1rem;
-    width: 0; /* Set width to 0 */
-    height: 0; /* Set height to 0 */
-    background-color: transparent; /* Make it invisible */
+    width: 0; 
+    height: 0; 
+    background-color: transparent; 
 }
 
 .text-container h1 {
-    font-size: 3.8rem; /* Slightly increase heading size */
-    margin-bottom: 3rem; /* Maintain spacing below the heading */
+    font-size: 3.8rem; 
+    margin-bottom: 3rem; 
     position: relative;
 }
 
 .text-container h1::after {
     content: '';
     display: block;
-    width: 85%; /* Slightly increase the width of the line */
-    height: 10px; /* Maintain line thickness */
-    background-color: #C19A6B; /* Line color */
-    margin: 0rem auto 0; /* Maintain reduced margin between the heading and the line */
+    width: 85%; 
+    height: 10px; 
+    background-color: #C19A6B; 
+    margin: 0rem auto 0; 
 }
 
 .text-container .explanation {
-    font-size: 1.2rem; /* Adjust text size */
-    line-height: 1.5; /* Adjust line height for readability */
-    color: #333; /* Ensure consistent text color */
-    margin: 0 auto 2rem; /* Center the paragraphs and add spacing below */
-    text-align: left; /* Keep text left-aligned */
-    max-width: 650px; /* Limit the width for better readability */
+    font-size: 1.2rem; 
+    line-height: 1.5; 
+    color: #333; 
+    margin: 0 auto 2rem; 
+    text-align: left; 
+    max-width: 650px; 
 }
 
 .smallpages img {
-    width: 500px; /* Slightly increase image size */
+    width: 500px;
     height: auto;
-    border-radius: 10px; /* Optional: Add rounded corners */
+    border-radius: 10px;
 }
 
 .major_events .events-container {
     display: flex;
-    justify-content: center; /* Center-align the events */
-    gap: 5rem; /* Space between each event */
-    flex-wrap: wrap; /* Ensure responsiveness */
+    justify-content: center;
+    gap: 5rem;
+    flex-wrap: wrap;
 }
 
 .major_events .event {
     text-align: center;
-    max-width: 250px; /* Limit the width of each event */
+    max-width: 250px;
 }
 
 .major_events .event img {
-    width: 170px; /* Slightly increase image size */
+    width: 170px; 
     height: 170px;
-    margin-bottom: 3rem; /* Maintain spacing below the image */
+    margin-bottom: 3rem;
 }
 
 .major_events .event h2 {
-    font-size: 1.7rem; /* Slightly increase heading size */
+    font-size: 1.7rem;
     margin-bottom: 0.5rem;
     color: #6B4F4F;
     text-align: center;
 }
 
 .major_events .event p {
-    font-size: 1.2rem; /* Slightly increase text size */
+    font-size: 1.2rem;
     color: #333;
-    line-height: 1.5; /* Adjust line height */
+    line-height: 1.5;
     text-align: center;
 }
 
 .major_events h1 {
-    font-size: 3.5rem; /* Double the original size */
+    font-size: 3.5rem;
     margin-bottom: 2rem;
     position: relative;
 }
@@ -107,15 +107,15 @@
 }
 
 .explanation {
-    font-size: 1.2rem; /* Increase text size */
-    line-height: 1.5; /* Adjust line height for readability */
+    font-size: 1.2rem; 
+    line-height: 1.5; 
 }
 
 .membership {
     background: url('about_img/about_membership.png') no-repeat center center/cover;
     color: white;
     text-align: center;
-    padding: 10rem 1rem; /* Increase padding to make the background taller */
+    padding: 10rem 1rem; 
     position: relative;
 }
 
@@ -143,7 +143,7 @@
     font-size: 1.5rem;
     line-height: 1.8;
     margin-bottom: 2rem;
-    text-align: center; /* Center-align the text */
+    text-align: center;
 }
 
 .membership .btn {
