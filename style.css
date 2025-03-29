@@ -1,0 +1,256 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: white;
+    padding-top: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+p {
+    margin: 0;
+    text-align: left;
+}
+
+/* Main Banner */
+.main_banner {
+    background: url('images/homepage_main.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 15rem 1rem; /* Increased padding to make the banner taller */
+}
+
+.main_banner h1 {
+    font-size: 5rem;
+    margin-bottom: 0;
+}
+
+.main_banner p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.main_banner .btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: #B069DB;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.main_banner .btn:hover {
+    background-color: #B069DB;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.main_banner h1, .main_banner p, .main_banner .btn {
+    opacity: 0;
+    animation: fadeIn 5s ease forwards;
+    transition: opacity 0.3s ease;
+}
+
+.main_banner h1:hover, .main_banner p:hover, .main_banner .btn:hover {
+    opacity: 1;
+}
+
+/* Section Styles */
+section {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.about_us, .events, .officers, .join, .sponsors {
+    margin: 1rem;
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+.explanation {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.about_us, .events, .officers, .join, .sponsors {
+    text-align: center;
+}
+
+.about_us {
+    background-color: #38265a;
+    color: white;
+}
+
+.events {
+    background-color: #F9F6EE;
+    color: black;
+}
+
+.officers {
+    background-color: #E5D9F2;
+    color: black;
+}
+
+.sponsors {
+    background-color: #CDC1FF;
+    color: black;
+}
+
+.join {
+    background-color: #E2DFD2;
+    color: black;
+}
+
+.sponsors .explanation, .events .explanation {
+    margin-bottom: 0;
+}
+
+.sponsors .btn {
+    margin-top: 1rem; /* Increase the top margin of the button */
+}
+
+.about_us div, .events div, .officers div, .join div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.events div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem; /* Space between image and text */
+    flex-wrap: wrap; /* Ensure the image moves below the text on smaller screens */
+    text-align: left; /* Align text to the left */
+}
+
+.about_us img, .events img, .officers img, .join img {
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.events img {
+    order: -1; /* Ensure the image appears to the left of the text */
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+@media (max-width: 768px) {
+    .events img {
+        order: 2; /* Move the image below the text on smaller screens */
+    }
+}
+
+.about_us .text-container, .events .text-container, .officers .text-container, .join .text-container {
+    max-width: 600px;
+    text-align: center;
+}
+
+.join .btn {
+    margin-top: 0;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background-color: #B069DB;
+    color: white;
+    border-radius: 3px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #8A2BE2; /* Change background color on hover */
+    transform: scale(1.1); /* Slightly enlarge the button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for a standout effect */
+}
+
+/* Navbar */
+.navbar ul li a[href="membership.html"] {
+    font-weight: bold;
+    color: #FFD700;
+    text-shadow: 1px 1px 2px #000;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.navbar ul li a[href="membership.html"]:hover {
+    transform: scale(1.1);
+    color: #FFA500;
+}
+
+.join div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem; /* Space between image and text */
+    flex-wrap: wrap; /* Ensure the image moves below the text on smaller screens */
+    text-align: left; /* Align text to the left */
+}
+
+.join img {
+    order: -1; /* Ensure the image appears to the left of the text */
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+@media (max-width: 768px) {
+    .join img {
+        order: 2; /* Move the image below the text on smaller screens */
+    }
+}
+
+.sponsors div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem; /* Space between text and image */
+    flex-wrap: wrap; /* Ensure responsiveness */
+    text-align: left; /* Align text to the left */
+}
+
+.sponsors img {
+    order: 1; /* Ensure the image appears on the right */
+    max-width: 650px;
+    height: auto;
+    border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+.sponsors .text-container {
+    max-width: 600px;
+}
+

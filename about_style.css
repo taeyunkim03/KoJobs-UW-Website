@@ -1,0 +1,153 @@
+.smallpages > div {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center-align text and image */
+    gap: 10rem; /* Space between text and image */
+    flex-wrap: wrap; /* Ensure responsiveness */
+    text-align: left; /* Align text to the left */
+}
+
+.smallpages {
+    padding-top: 5rem; /* Add top padding to increase the gap */
+    padding-bottom: 5rem; /* Add bottom padding to increase the gap */
+    background-color: #F5F5DC; /* Set background color */
+}
+
+.text-container {
+    max-width: 650px; /* Slightly increase text width */
+    font-size: 4.2rem; /* Slightly increase text size */
+    line-height: 3.2; /* Adjust line height for readability */
+}
+
+.text-container::after {
+    content: ''; /* Remove vertical line */
+    position: absolute;
+    top: 0;
+    right: -1rem;
+    width: 0; /* Set width to 0 */
+    height: 0; /* Set height to 0 */
+    background-color: transparent; /* Make it invisible */
+}
+
+.text-container h1 {
+    font-size: 3.8rem; /* Slightly increase heading size */
+    margin-bottom: 3rem; /* Maintain spacing below the heading */
+    position: relative;
+}
+
+.text-container h1::after {
+    content: '';
+    display: block;
+    width: 85%; /* Slightly increase the width of the line */
+    height: 10px; /* Maintain line thickness */
+    background-color: #C19A6B; /* Line color */
+    margin: 0rem auto 0; /* Maintain reduced margin between the heading and the line */
+}
+
+.smallpages img {
+    width: 650px; /* Slightly increase image size */
+    height: auto;
+    border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+.major_events .events-container {
+    display: flex;
+    justify-content: center; /* Center-align the events */
+    gap: 5rem; /* Space between each event */
+    flex-wrap: wrap; /* Ensure responsiveness */
+}
+
+.major_events .event {
+    text-align: center;
+    max-width: 250px; /* Limit the width of each event */
+}
+
+.major_events .event img {
+    width: 170px; /* Slightly increase image size */
+    height: 170px;
+    margin-bottom: 3rem; /* Maintain spacing below the image */
+}
+
+.major_events .event h2 {
+    font-size: 1.7rem; /* Slightly increase heading size */
+    margin-bottom: 0.5rem;
+    color: #6B4F4F;
+    text-align: center;
+}
+
+.major_events .event p {
+    font-size: 1.2rem; /* Slightly increase text size */
+    color: #333;
+    line-height: 1.5; /* Adjust line height */
+    text-align: center;
+}
+
+.major_events h1 {
+    font-size: 3.5rem; /* Double the original size */
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.major_events h1::after {
+    content: '';
+    display: block;
+    width: 25%;
+    height: 10px;
+    background-color: #C19A6B;
+    margin: 1rem auto 0;
+}
+
+.explanation {
+    font-size: 1.2rem; /* Increase text size */
+    line-height: 1.5; /* Adjust line height for readability */
+}
+
+.membership {
+    background: url('about_img/about_membership.png') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 15rem 1rem; /* Increase padding to make the background taller */
+    position: relative;
+}
+
+.membership-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.membership h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.membership h1::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 4px;
+    background-color: #C19A6B;
+    margin: 1rem auto 0;
+}
+
+.membership p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    text-align: center; /* Center-align the text */
+}
+
+.membership .btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: #B069DB;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.membership .btn:hover {
+    background-color: #8A2BE2;
+}

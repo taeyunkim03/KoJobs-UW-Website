@@ -1,0 +1,161 @@
+.smallpages {
+    background-color: #F9F6EE; /* Match the background color */
+    padding: 3rem 1rem; /* Add padding for spacing */
+    text-align: center;
+    border-radius: 15px; /* Add rounded corners */
+    margin: 0 1rem; /* Add left and right margins */
+}
+
+.smallpages > div {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center-align text and image */
+    gap: 10rem; /* Space between text and image */
+    flex-wrap: wrap; /* Ensure responsiveness */
+    text-align: left; /* Align text to the left */
+}
+
+.text-container {
+    max-width: 650px; /* Set maximum width for text */
+    font-size: 1.2rem; /* Adjust text size */
+    line-height: 1.5; /* Adjust line height for readability */
+}
+
+.text-container h1 {
+    font-size: 3rem; /* Adjust heading size */
+    margin-bottom: 1rem; /* Add spacing below the heading */
+    position: relative;
+    font-weight: bold; /* Make the heading bold */
+}
+
+.text-container h1::after {
+    content: '';
+    display: block;
+    width: 100%; /* Set width of the line */
+    height: 8px; /* Set line thickness */
+    background-color: #C19A6B; /* Line color */
+    margin: 0 auto; /* Center the line */
+}
+
+.text-container .explanation {
+    font-size: 1.2rem; /* Adjust text size */
+    line-height: 1.5; /* Adjust line height for readability */
+    color: #333; /* Ensure consistent text color */
+    margin-top: 0rem;
+}
+
+.smallpages img {
+    order: 1; /* Ensure the image appears on the right */
+    width: 550px; /* Set image width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Add rounded corners */
+}
+
+.event-highlights {
+    background-color: #F9F9F9;
+    padding: 3rem 1rem;
+    border-radius: 15px;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+.event {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem; /* Add spacing between event boxes */
+    align-items: center; /* Center content vertically */
+    background-color: white; /* Add background color for each box */
+    border: 1px solid #ddd; /* Add border around each box */
+    border-radius: 10px; /* Add rounded corners */
+    padding: 2rem; /* Add padding inside each box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+.event:last-child {
+    margin-bottom: 0; /* Remove bottom margin for the last event */
+}
+
+.event-text {
+    flex: 1;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center text vertically */
+}
+
+.event-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: purple;
+}
+
+.event-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.event-images {
+    display: flex;
+    gap: 1rem;
+    flex: 1;
+    justify-content: center;
+}
+
+.event-images img {
+    width: 350px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-images img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.year-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.year-section h2 {
+    font-size: 1.8rem;
+    color: #4A4A4A;
+    margin: 0;
+}
+
+.expand-btn {
+    background-color: #6A0DAD;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.expand-btn:hover {
+    background-color: #4A007E;
+}
+
+.events-content.hidden {
+    display: none;
+}
+
+.events-expandable {
+    padding: 2rem 1rem;
+    text-align: center;
+    background-color: #FFFFFF;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #C19A6B; /* Match the color of the officers page */
+    margin: 2rem 0; /* Add spacing above and below the line */
+}
