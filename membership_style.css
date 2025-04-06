@@ -14,14 +14,15 @@ body {
 }
 
 .membership-content {
-    max-width: 800px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
 .membership h1 {
-    font-size: 10rem; 
+    font-size: 5rem; /* Adjust font size for better responsiveness */
     margin-bottom: 1rem;
     position: relative;
+    max-width: 100%; /* Ensure it fits within the container */
 }
 
 .membership h1::after {
@@ -37,6 +38,7 @@ body {
     font-size: 1.2rem; 
     line-height: 1.8;
     margin-bottom: 2rem;
+    max-width: 100%; /* Ensure it fits within the container */
 }
 
 .membership .btn {
@@ -47,7 +49,9 @@ body {
     border-radius: 5px;
     font-weight: bold;
     text-decoration: none;
+    font-size: 1.2rem; /* Adjust font size for better responsiveness */
     transition: background-color 0.3s ease;
+    max-width: 100%; /* Ensure it fits within the container */
 }
 
 .membership .btn:hover {
@@ -60,6 +64,7 @@ body {
     justify-content: center;
     gap: 2rem; 
     margin-top: 2rem;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .membership-actions .btn {
@@ -86,6 +91,7 @@ body {
 .membership-actions .qrcode {
     width: 150px;
     height: auto; 
+    max-width: 100%; /* Ensure it fits within the container */
 }
 
 .smallpages {
@@ -95,14 +101,14 @@ body {
     padding: 7rem 0rem; 
 }
 
-.smallpages > div {
+/* .smallpages > div {
     background-color: rgba(0, 0, 0, 0.5); 
     padding: 2rem; 
     border-radius: 10px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     margin-left: 10rem; 
     margin-right: 10rem; 
-}
+} */
 
 .smallpages h1 {
     font-size: 5rem;
@@ -112,7 +118,7 @@ body {
 .smallpages .explanation {
     font-size: 2.5rem; 
     line-height: 1.8;
-    max-width: 700px;
+    max-width: 100%;
     margin: 0 auto;
     text-align: center;
 }
@@ -153,4 +159,23 @@ body {
 
 .membership-actions .qrcode {
     animation-delay: 0.8s; 
+}
+
+@media (max-width: 768px) {
+    .membership h1 {
+        font-size: 3rem; /* Reduce font size for smaller screens */
+    }
+
+    .membership p {
+        font-size: 1rem; /* Reduce font size for smaller screens */
+    }
+
+    .membership .btn {
+        font-size: 1rem; /* Reduce font size for smaller screens */
+        padding: 0.5rem 1.5rem; /* Adjust padding for smaller screens */
+    }
+
+    .membership-actions .qrcode {
+        width: 120px; /* Reduce QR code size for smaller screens */
+    }
 }
