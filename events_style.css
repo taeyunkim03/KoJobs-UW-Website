@@ -26,6 +26,7 @@
     margin-bottom: 1rem; 
     position: relative;
     font-weight: bold;
+    line-height: 1.2;
 }
 
 .text-container h1::after {
