@@ -103,7 +103,7 @@ h1 {
 
 .sponsor {
     text-align: center;
-    max-width: 100%;
+    max-width: 650px;
 }
 
 .sponsor img {
@@ -119,9 +119,9 @@ h1 {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow effect on hover */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 350px) {
     .sponsor img {
-        width: 90%; /* Make images take up 90% of the container width on phone screens */
-        max-width: 300px; /* Limit the maximum width */
+        width: 300px; /* Make images take up the full container width on mobile screens */
+        max-width: 100%; /* Increase the maximum width */
     }
 }
