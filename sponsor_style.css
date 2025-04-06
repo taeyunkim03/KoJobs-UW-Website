@@ -110,19 +110,12 @@ h1 {
     display: block;
     margin: 0 auto 1rem;
     max-width: 100%;
-    width: 220px; /* Increase the default width */
-    height: auto;
+    width: 200px;
+    height: 200px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .sponsor img:hover {
     transform: scale(1.1);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-@media (max-width: 768px) {
-    .sponsor img {
-        width: 100%; /* Make the images take up 90% of the container width on mobile */
-        max-width: 350px; /* Increase the maximum width for mobile */
-    }
 }

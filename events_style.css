@@ -45,6 +45,12 @@
     margin-top: 0rem;
 }
 
+.text-container img {
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 10px; 
+}
+
 .smallpages img {
     order: 1; 
     width: 550px; 
