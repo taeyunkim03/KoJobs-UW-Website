@@ -61,7 +61,7 @@
 
 .event {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column; /* Stack content vertically */
     gap: 1rem;
     margin-bottom: 1.5rem; 
     align-items: center; 
@@ -82,6 +82,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center; /* Center-align text */
+}
+
+@media (min-width: 768px) {
+    .event-text {
+        order: 0; /* Reset order for larger screens */
+    }
 }
 
 .event-text h2 {
@@ -99,7 +106,7 @@
 .event-images {
     display: flex;
     gap: 1rem;
-    flex: 1;
+    flex-wrap: wrap; /* Allow wrapping for narrow screens */
     justify-content: center;
 }
 
