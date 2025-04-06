@@ -155,14 +155,14 @@ section {
 }
 
 .about_us img, .events img, .officers img, .join img {
-    max-width: 500px;
+    max-width: 100%;
     height: auto;
     border-radius: 10px;
 }
 
 .events img {
     order: -1; 
-    max-width: 500px;
+    max-width: 100%;
     height: auto;
     border-radius: 10px; 
 }
@@ -223,7 +223,7 @@ section {
 
 .join img {
     order: -1; 
-    max-width: 400px;
+    max-width: 100%;
     height: auto;
     border-radius: 10px; 
 }
@@ -245,7 +245,7 @@ section {
 
 .sponsors img {
     order: 1; 
-    max-width: 650px;
+    max-width: 100%;
     height: auto;
     border-radius: 10px; 
 }
