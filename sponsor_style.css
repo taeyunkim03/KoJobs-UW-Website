@@ -119,7 +119,7 @@ h1 {
 
 @media (max-width: 768px) {
     .sponsor img {
-        max-width: 150px; /* Adjust the maximum width for mobile screens */
+        max-width: 200px; /* Adjust the maximum width for mobile screens */
     }
 }
 
