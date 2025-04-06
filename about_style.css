@@ -2,19 +2,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5rem;
+    gap: 2rem;
     flex-wrap: wrap;
     text-align: left;
 }
 
 .smallpages {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     background-color: #F5F5DC;
 }
 
 .text-container {
-    max-width: 650px;
+    max-width: 600px;
     font-size: 4.2rem;
     line-height: 3.2;
 }
@@ -30,9 +30,10 @@
 }
 
 .text-container h1 {
-    font-size: 3.8rem; 
-    margin-bottom: 3rem; 
+    font-size: 3rem; 
+    margin-bottom: 1.5rem; 
     position: relative;
+    line-height: 1.2;
 }
 
 .text-container h1::after {
@@ -41,16 +42,17 @@
     width: 85%; 
     height: 10px; 
     background-color: #C19A6B; 
-    margin: 0rem auto 0; 
+    margin: 1rem auto 0;
 }
 
 .text-container .explanation {
     font-size: 1.2rem; 
     line-height: 1.5; 
+    text-align: center;
     color: #333; 
     margin: 0 auto 2rem; 
     text-align: left; 
-    max-width: 650px; 
+    max-width: 100%; 
 }
 
 .smallpages img {
@@ -74,7 +76,6 @@
 .major_events .event img {
     max-width: 100%;
     height: auto;
-
     margin-bottom: 3rem;
 }
 
@@ -110,6 +111,7 @@
 .explanation {
     font-size: 1.2rem; 
     line-height: 1.5; 
+    text-align: center;
 }
 
 .membership {
@@ -126,7 +128,8 @@
 }
 
 .membership h1 {
-    font-size: 4rem;
+    font-size: 3rem;
+    max-width: 100%;
     margin-bottom: 1rem;
     position: relative;
 }
