@@ -15,22 +15,57 @@
     font-weight: bold;
 }
 
-.navbar ul {
+.nav-links {
     list-style: none;
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
-.navbar ul li a {
+.nav-links li a {
     color: white;
     font-weight: bold;
+    text-decoration: none;
     transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #ddd;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 3rem;
+        left: 0;
+        background-color: rgba(56, 38, 90, 0.9); /* Add transparency to the background */
+        width: 100%;
+        padding: 5px 0;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
+        padding: 5px 0;
+    }
 }
 
 .navbar-right ul li a[href="membership.html"] {
     color: #EFBF04 ; 
-}
-
-.navbar ul li a:hover {
-    color: #ddd;
 }
