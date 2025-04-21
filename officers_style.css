@@ -196,3 +196,22 @@ hr {
     color: #333;
 }
 
+.department {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.department img {
+    max-width: 50%; /* Limit the image size to 50% of the container */
+    height: auto;
+    border-radius: 10px; /* Add rounded corners */
+}
+
+@media (max-width: 768px) {
+    .department img {
+        max-width: 70%; /* Adjust the image size for smaller screens */
+    }
+}
+
