@@ -211,7 +211,7 @@ hr {
 
 @media (max-width: 768px) {
     .department img {
-        max-width: 70%; /* Adjust the image size for smaller screens */
+        max-width: 95%; /* Adjust the image size for smaller screens */
     }
 }
 
