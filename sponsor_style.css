@@ -1,95 +1,95 @@
-/* General Styles */
+/* ================= Sponsors page ================= */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
     background-color: #F5F5F5;
 }
 
-h1 {
-    font-size: 2.5rem;
-    text-align: center;
-    color: black;
-    margin: 0;
-}
-
-/* Smallpages Section */
+/* ---- Hero ---- */
 .smallpages {
-    background-color: #E2DFD2;
-    padding: 2.5rem 1rem;
+    background-color: var(--sand);
+    padding: clamp(2.5rem, 6vw, 4rem) 1rem;
     text-align: center;
-    border-radius: 15px;
-    margin: 0 1rem;
+    border-radius: 0;
+    margin: 0;
 }
 
 .smallpages > div {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5rem;
+    gap: clamp(1.5rem, 4vw, 3.5rem);
     flex-wrap: wrap;
     text-align: left;
+    max-width: 1120px;
+    margin: 0 auto;
 }
 
 .text-container {
-    max-width: 650px;
-    font-size: 1.2rem;
-    line-height: 1.2;
+    flex: 1 1 320px;
+    max-width: 600px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: left;
 }
 
 .text-container h1 {
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3rem);
     margin-bottom: 1rem;
     font-weight: bold;
     position: relative;
+    line-height: 1.2;
+    text-align: left;
 }
 
 .text-container h1::after {
     content: '';
     display: block;
-    width: 85%;
-    height: 8px;
-    background-color: #C19A6B;
-    margin: 0 auto;
+    width: 100%;
+    height: 6px;
+    border-radius: 3px;
+    background-color: var(--tan);
+    margin: 0.75rem 0 0;
 }
 
 .text-container .explanation {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
+    font-size: 1.05rem;
+    line-height: 1.7;
     color: #333;
+    text-align: left;
 }
 
+/* Hero image sits to the RIGHT of the text on desktop, below on mobile */
 .smallpages img {
+    order: 2;
+    flex: 0 1 440px;
+    width: 440px;
     max-width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+    object-fit: cover;
 }
 
-.text-container img {
-    width: 100px;
-    height: auto;
-    border-radius: 10px;
-}
-
-/* Sponsors Section */
+/* ---- Sponsor grids ---- */
 .sponsors {
     text-align: center;
-    padding: 5rem 1rem;
+    padding: clamp(3rem, 7vw, 5rem) 1rem;
     background-color: white;
 }
 
 .sponsors h1 {
-    font-size: 3rem;
-    margin-bottom: 2rem;
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    margin-bottom: 2.5rem;
     position: relative;
 }
 
 .sponsors h1::after {
     content: '';
     display: block;
-    width: 25%;
+    width: 80px;
     height: 4px;
-    background-color: #C19A6B;
+    border-radius: 2px;
+    background-color: var(--tan);
     margin: 1rem auto 0;
 }
 
@@ -97,31 +97,40 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px; /* Adjust spacing between images */
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto 1rem;
 }
 
+/* Four partners share one row on desktop; wrap gracefully on smaller screens */
 .sponsor {
     text-align: center;
-    max-width: 100%;
+    flex: 1 1 180px;
+    max-width: 240px;
+}
+
+.sponsor a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    padding: 1.5rem;
+    background-color: #FFFFFF;
+    border: 1px solid #ECECEC;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+
+.sponsor a:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
 }
 
 .sponsor img {
-    width: 100%;
-    max-width: 220px; /* Limit the width for desktop screens */
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
     height: auto;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-fit: contain;
 }
-
-.sponsor img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-@media (max-width: 768px) {
-    .sponsor img {
-        max-width: 200px; /* Adjust the maximum width for mobile screens */
-    }
-}
-
-
-

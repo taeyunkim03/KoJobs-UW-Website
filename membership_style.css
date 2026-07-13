@@ -1,182 +1,104 @@
+/* ================= Membership page ================= */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
     background-color: #F5F5F5;
 }
 
-.membership {
-    background: url('about_img/about_membership.png') no-repeat center center/cover;
+.smallpages {
+    background: linear-gradient(rgba(28, 18, 48, 0.55), rgba(28, 18, 48, 0.6)),
+                url('images/uw_quad.jpg') no-repeat center center / cover;
     color: white;
     text-align: center;
-    padding: 10rem 1rem;
+    padding: clamp(6rem, 18vw, 12rem) 1rem;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.membership-content {
-    max-width: 100%;
+.smallpages > div {
+    max-width: 760px;
     margin: 0 auto;
 }
 
-.membership h1 {
-    font-size: 5rem; /* Adjust font size for better responsiveness */
+.smallpages h1 {
+    font-size: clamp(2.4rem, 8vw, 3.8rem);
+    line-height: 1.2;
     margin-bottom: 1rem;
-    position: relative;
-    max-width: 100%; /* Ensure it fits within the container */
+    text-shadow: 0 2px 18px rgba(0, 0, 0, 0.4);
 }
 
-.membership h1::after {
-    content: '';
-    display: block;
-    width: 50%;
-    height: 4px;
-    background-color: #C19A6B;
-    margin: 1rem auto 0;
+.smallpages .explanation {
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    line-height: 1.4;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    text-shadow: 0 1px 12px rgba(0, 0, 0, 0.4);
 }
 
-.membership p {
-    font-size: 1.2rem; 
-    line-height: 1.8;
-    margin-bottom: 2rem;
-    max-width: 100%; /* Ensure it fits within the container */
-}
-
-.membership .btn {
-    display: inline-block;
-    padding: 0.5rem 2rem;
-    background-color: #B069DB;
-    color: white;
-    border-radius: 5px;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 1.2rem; /* Adjust font size for better responsiveness */
-    transition: background-color 0.3s ease;
-    max-width: 100%; /* Ensure it fits within the container */
-}
-
-.membership .btn:hover {
-    background-color: #8A2BE2;
-}
-
+/* ---- Actions ---- */
 .membership-actions {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2rem; 
-    margin-top: 2rem;
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    gap: 2rem;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
 }
 
 .membership-actions .btn {
-    padding: 1rem 2rem;
-    background-color: #6A0DAD;
+    padding: 0.9rem 2.4rem;
+    background-color: var(--purple);
     color: white;
-    border-radius: 5px;
+    border-radius: 999px;
     font-weight: bold;
     text-decoration: none;
-    font-size: 1.5rem; 
-    transition: background-color 0.3s ease;
+    font-size: 1.25rem;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .membership-actions .btn:hover {
     background-color: #4A007E;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.3);
 }
 
 .membership-actions .or-text {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: white;
     font-weight: bold;
 }
 
 .membership-actions .qrcode {
     width: 150px;
-    height: auto; 
-    max-width: 100%; /* Ensure it fits within the container */
-}
-
-.smallpages {
-    background: url('images/uw_quad.jpg') no-repeat center center/cover;
-    color: white;
-    text-align: center;
-    padding: 7rem 0rem; 
-}
-
-/* .smallpages > div {
-    background-color: rgba(0, 0, 0, 0.5); 
-    padding: 2rem; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-    margin-left: 10rem; 
-    margin-right: 10rem; 
-} */
-
-.smallpages h1 {
-    font-size: 3.5rem;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-}
-
-.smallpages .explanation {
-    font-size: 2rem; 
-    line-height: 1.2;
+    height: auto;
     max-width: 100%;
-    margin: 0 auto;
-    text-align: center;
+    border-radius: 8px;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.smallpages h1, 
-.smallpages .explanation, 
-.membership-actions .btn, 
-.membership-actions .or-text, 
+/* ---- Entrance animation ---- */
+.smallpages h1,
+.smallpages .explanation,
+.membership-actions .btn,
+.membership-actions .or-text,
 .membership-actions .qrcode {
-    opacity: 0; 
-    animation: fadeIn 2s ease forwards; 
+    opacity: 0;
+    animation: fadeUp 0.9s var(--ease) forwards;
 }
 
-.smallpages h1 {
-    animation-delay: 0.2s; 
-}
+.smallpages h1              { animation-delay: 0.1s; }
+.smallpages .explanation    { animation-delay: 0.35s; }
+.membership-actions .btn,
+.membership-actions .or-text,
+.membership-actions .qrcode { animation-delay: 0.6s; }
 
-.smallpages .explanation {
-    animation-delay: 0.6s; 
-}
-
-.membership-actions .btn {
-    animation-delay: 0.8s; 
-}
-
-.membership-actions .or-text {
-    animation-delay: 0.8s; 
-}
-
-.membership-actions .qrcode {
-    animation-delay: 0.8s; 
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: none; }
 }
 
 @media (max-width: 768px) {
-    .membership h1 {
-        font-size: 3rem; /* Reduce font size for smaller screens */
-    }
-
-    .membership p {
-        font-size: 1rem; /* Reduce font size for smaller screens */
-    }
-
-    .membership .btn {
-        font-size: 1rem; /* Reduce font size for smaller screens */
-        padding: 0.5rem 1.5rem; /* Adjust padding for smaller screens */
-    }
-
     .membership-actions .qrcode {
-        width: 120px; /* Reduce QR code size for smaller screens */
+        width: 120px;
     }
 }

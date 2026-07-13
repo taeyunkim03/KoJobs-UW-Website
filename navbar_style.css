@@ -2,70 +2,117 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 2rem;
+    padding: 0.75rem 2rem;
     background-color: #38265a;
     color: white;
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
 }
 
 .navbar .logo {
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 1rem;
+    gap: 1.6rem;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links li a {
+    position: relative;
     color: white;
     font-weight: bold;
     text-decoration: none;
-    transition: color 0.3s;
+    padding: 0.25rem 0;
+    transition: color 0.25s ease;
+}
+
+/* Animated underline on hover */
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: #C19A6B;
+    transition: width 0.28s ease;
 }
 
 .nav-links li a:hover {
-    color: #ddd;
+    color: #E5D9F2;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+
+/* Keep the membership star link's own accent, no underline bar */
+.nav-links li a[href="membership.html"]::after {
+    display: none;
 }
 
 .menu-toggle {
     display: none;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     cursor: pointer;
     color: white;
+    line-height: 1;
+    user-select: none;
+    transition: transform 0.3s ease;
 }
 
-/* Mobile responsive styles */
+.menu-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* ---- Mobile ---- */
 @media (max-width: 768px) {
     .menu-toggle {
-        display: block
+        display: block;
     }
 
     .nav-links {
-        display: none;
+        display: flex;
         flex-direction: column;
         position: absolute;
-        top: 3rem;
+        top: 100%;
         left: 0;
-        background-color: rgba(56, 38, 90, 0.9); /* Add transparency to the background */
         width: 100%;
-        padding: 5px 0;
+        gap: 0;
+        background-color: rgba(56, 38, 90, 0.98);
+        padding: 0;
+        /* Collapsed by default with a smooth slide/fade */
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.35s ease, opacity 0.3s ease;
     }
 
     .nav-links.show {
-        display: flex;
+        max-height: 420px;
+        opacity: 1;
     }
 
     .nav-links li {
         text-align: center;
-        padding: 5px 0;
+        width: 100%;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
-}
 
-.navbar-right ul li a[href="membership.html"] {
-    color: #EFBF04 ; 
+    .nav-links li a {
+        display: block;
+        padding: 0.9rem 0;
+    }
+
+    .nav-links li a::after {
+        display: none;
+    }
 }

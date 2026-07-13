@@ -1,176 +1,200 @@
+/* ================= Events page ================= */
+
+/* ---- Hero (shared .smallpages pattern) ---- */
 .smallpages {
-    background-color: #F9F6EE;
-    padding: 3rem 1rem; 
+    background-color: var(--cream);
+    padding: clamp(2.5rem, 6vw, 4rem) 1rem;
     text-align: center;
-    border-radius: 15px; 
-    margin: 0 1rem; 
+    border-radius: 0;
+    margin: 0;
 }
 
 .smallpages > div {
     display: flex;
     align-items: center;
-    justify-content: center; 
-    gap: 5rem; 
-    flex-wrap: wrap; 
-    text-align: left; 
+    justify-content: center;
+    gap: clamp(1.5rem, 4vw, 3.5rem);
+    flex-wrap: wrap;
+    text-align: left;
+    max-width: 1120px;
+    margin: 0 auto;
 }
 
 .text-container {
-    max-width: 650px;
-    font-size: 1.2rem; 
-    line-height: 1.5; 
+    flex: 1 1 320px;
+    max-width: 600px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: left;
 }
 
 .text-container h1 {
-    font-size: 3rem; 
-    margin-bottom: 1rem; 
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 1rem;
     position: relative;
     font-weight: bold;
     line-height: 1.2;
+    text-align: left;
 }
 
 .text-container h1::after {
     content: '';
     display: block;
-    width: 100%; 
-    height: 8px; 
-    background-color: #C19A6B; 
-    margin: 0 auto; 
+    width: 100%;
+    height: 6px;
+    border-radius: 3px;
+    background-color: var(--tan);
+    margin: 0.75rem 0 0;
 }
 
 .text-container .explanation {
-    font-size: 1.2rem; 
-    line-height: 1.5; 
-    color: #333; 
-    margin-top: 0rem;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #333;
+    margin-top: 0;
+    text-align: left;
 }
 
-.text-container img {
-    max-width: 100%; 
-    height: auto; 
-    border-radius: 10px; 
-}
-
+/* Hero image sits to the RIGHT of the text on desktop, below on mobile */
 .smallpages img {
-    order: 1; 
-    width: 550px; 
-    height: auto; 
-    border-radius: 10px; 
-}
-
-.event-highlights {
-    background-color: #F9F9F9;
-    padding: 3rem 1rem;
-    border-radius: 15px;
-    margin: 2rem auto;
-    max-width: 1200px;
-}
-
-.event {
-    display: flex;
-    flex-direction: column; /* Stack content vertically */
-    gap: 1rem;
-    margin-bottom: 1.5rem; 
-    align-items: center; 
-    background-color: white; 
-    border: 1px solid #ddd; 
-    border-radius: 10px; 
-    padding: 2rem; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-}
-
-.event:last-child {
-    margin-bottom: 0; 
-}
-
-.event-text {
-    flex: 1;
-    max-width: 1000px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center; /* Center-align text */
-}
-
-@media (min-width: 768px) {
-    .event-text {
-        order: 0; /* Reset order for larger screens */
-    }
-}
-
-.event-text h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    margin-top: 0rem;
-    color: purple;
-}
-
-.event-text p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #555;
-}
-
-.event-images {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap; /* Allow wrapping for narrow screens */
-    justify-content: center;
-}
-
-.event-images img {
-    width: 250px;
+    order: 2;
+    flex: 0 1 440px;
+    width: 440px;
+    max-width: 100%;
     height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+    object-fit: cover;
 }
 
-.event-images img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+/* ---- Expandable wrapper ---- */
+.events-expandable {
+    padding: clamp(2rem, 5vw, 3rem) 1rem;
+    text-align: center;
+    background-color: #FFFFFF;
 }
 
 .year-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 1rem 0;
+    gap: 1rem;
+    max-width: 1000px;
+    margin: 1rem auto;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid #EFEAE0;
 }
 
 .year-section h2 {
-    font-size: 1.8rem;
+    font-size: clamp(1.4rem, 3.5vw, 1.9rem);
     color: #4A4A4A;
     margin: 0;
 }
 
 .expand-btn {
-    background-color: #6A0DAD;
+    background-color: var(--purple);
     color: white;
     border: none;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    border-radius: 5px;
+    padding: 0.6rem 1.4rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 999px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .expand-btn:hover {
     background-color: #4A007E;
+    transform: translateY(-2px);
+}
+
+.events-content {
+    max-width: 1000px;
+    margin: 1.5rem auto 0;
 }
 
 .events-content.hidden {
     display: none;
 }
 
-.events-expandable {
-    padding: 2rem 1rem;
+/* ---- Event card ---- */
+.event {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-bottom: 1.75rem;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #ECE6DB;
+    border-radius: var(--radius);
+    padding: clamp(1.5rem, 4vw, 2.25rem);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+
+.event:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.event:last-child {
+    margin-bottom: 0;
+}
+
+.event-text {
+    max-width: 760px;
     text-align: center;
-    background-color: #FFFFFF;
+}
+
+.event-text h2 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin: 0 0 0.75rem;
+    color: var(--purple);
+}
+
+.event-text p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #555;
+    text-align: center;
+}
+
+/* ---- Image row: uniform HEIGHT so posters (tall) and photos (wide) align
+       without ever being cropped. Each image keeps its natural proportions. ---- */
+.event-images {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.event-images img {
+    height: clamp(200px, 26vw, 300px);
+    width: auto;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-images img:hover {
+    transform: scale(1.03);
+    box-shadow: var(--shadow-md);
+}
+
+/* On phones, stack the images full-width at their natural aspect ratio */
+@media (max-width: 540px) {
+    .event-images img {
+        height: auto;
+        width: 100%;
+        max-width: 340px;
+    }
 }
 
 hr {
     border: 0;
-    border-top: 1px solid #C19A6B;
+    border-top: 1px solid var(--tan);
     margin: 2rem 0;
 }
